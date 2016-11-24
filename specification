@@ -1,0 +1,20 @@
+1. mongodb
+    (1) users (uid, username, email, password, salt, signup_date )
+    (2) image_links (imgid, raw_link, resized_link, thumbnail_link, upload_date, uid)
+
+2. sign up, login , forget password
+
+3. upload imgae - raw image, resized image, thumbnail
+
+4. rabbitMQ , celery to asynchronously process images / send email
+
+5. retrieve images - paging /  thumbnail url list / resized image url list / raw image url
+
+6. Redis cache - the first page of images url list
+
+7. logging
+
+8. load testing
+
+9, session  http://flask.pocoo.org/snippets/category/sessions/
+
