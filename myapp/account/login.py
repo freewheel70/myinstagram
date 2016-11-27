@@ -6,6 +6,7 @@ from pymongo import MongoClient
 import hashlib
 from flask import session
 
+
 login = Blueprint('login', __name__, url_prefix='/api/login')
 
 
@@ -34,7 +35,7 @@ def find_user(email, password):
     if user is not None:
         password_hash = hashlib.sha256(password.encode() + user['salt'].encode()).hexdigest()
         if password_hash == user['password']:
-            session['email'] = user['email']
+            session['email'] = email
             return "Login success "+session['email']
         else:
             return "Invalid Password"

@@ -6,6 +6,7 @@ from flask import render_template
 from validator import validate_email
 import hashlib
 import uuid
+from myapp.utils.email_helper import send_weclome_email
 
 signup = Blueprint('signup', __name__, url_prefix='/api/signup')
 
@@ -47,4 +48,6 @@ def save_newuser(email, password):
             }
         )
 
+        # todo use celery
+        send_weclome_email(email)
         return "Sign up successfully!"
