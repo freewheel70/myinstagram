@@ -5,7 +5,6 @@ from flask import request
 from flask import render_template
 from validator import validate_email
 import hashlib
-from os import urandom
 import uuid
 
 signup = Blueprint('signup', __name__, url_prefix='/api/signup')
@@ -31,17 +30,21 @@ def save_newuser(email, password):
     client = MongoClient("mongodb://localhost:27017")
     db = client.myinstagram
 
-    #salt = urandom(20)
-    salt = uuid.uuid4().hex
-    password_hash = hashlib.sha256(password.encode() + salt.encode()).hexdigest()
+    user = db.users.find_one({'email': email})
 
-    db.users.insert(
-        {
-            'email': email,
-            'password': password_hash,
-            'salt': salt,
-            'signup_date': datetime.now()
-        }
-    )
+    if user is not None:
+        return "The email is already registered"
+    else:
+        salt = uuid.uuid4().hex
+        password_hash = hashlib.sha256(password.encode() + salt.encode()).hexdigest()
 
-    return "Sign up successfully!"
+        db.users.insert(
+            {
+                'email': email,
+                'password': password_hash,
+                'salt': salt,
+                'signup_date': datetime.now()
+            }
+        )
+
+        return "Sign up successfully!"

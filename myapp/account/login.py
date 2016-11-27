@@ -4,7 +4,7 @@ from flask import render_template
 from validator import validate_email
 from pymongo import MongoClient
 import hashlib
-import binascii
+from flask import session
 
 login = Blueprint('login', __name__, url_prefix='/api/login')
 
@@ -34,7 +34,8 @@ def find_user(email, password):
     if user is not None:
         password_hash = hashlib.sha256(password.encode() + user['salt'].encode()).hexdigest()
         if password_hash == user['password']:
-            return "Login success"
+            session['email'] = user['email']
+            return "Login success "+session['email']
         else:
             return "Invalid Password"
     else:
