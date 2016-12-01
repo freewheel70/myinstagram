@@ -1,12 +1,13 @@
-from pymongo import MongoClient
-from datetime import datetime
-from flask import Blueprint
-from flask import request
-from flask import render_template
-from validator import validate_email
 import hashlib
 import uuid
-from myapp.utils.email_helper import send_weclome_email
+from datetime import datetime
+
+from flask import Blueprint
+from flask import render_template
+from flask import request
+from pymongo import MongoClient
+from  myapp.utils import email_sender
+from validator import validate_email
 
 signup = Blueprint('signup', __name__, url_prefix='/api/signup')
 
@@ -48,6 +49,5 @@ def save_newuser(email, password):
             }
         )
 
-        # todo use celery
-        send_weclome_email(email)
-        return "Sign up successfully!"
+        email_sender.send(email, "Welcome To MyInstagram !")
+        return "Sign up successfully! "

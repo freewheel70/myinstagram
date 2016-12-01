@@ -12,7 +12,7 @@ from celery import Celery
 from celery.result import AsyncResult
 from flask import request
 
-from myapp.utils import email_helper
+from backup.celery_workers import email_helper
 
 mycelery = Celery('ImageHandler', backend='redis://localhost:6379', broker='amqp://guest@localhost//')
 

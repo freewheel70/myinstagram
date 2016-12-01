@@ -1,6 +1,7 @@
 import sendgrid
 from sendgrid.helpers.mail import *
-from myapp.keys import sendGridKey
+
+from asyncworker.keys import sendGridKey
 
 
 def send_weclome_email(address):
