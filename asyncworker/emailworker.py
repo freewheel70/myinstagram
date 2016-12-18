@@ -13,13 +13,13 @@ channel.queue_declare(queue='email')
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body)
     email = json.loads(body)
-    send_email(email['address'], "MyInstagram Notification", email['content'])
+    send_email(email['address'], "Freewheel Photos Notification", email['content'])
 
 
 def send_email(address, subject, contents):
     apikey = sendGridKey()
     sg = sendgrid.SendGridAPIClient(apikey=apikey)
-    from_email = Email("notification@myinstagram.com")
+    from_email = Email("notification@freewheel.com")
     to_email = Email(address)
     subject = subject
     content = Content("text/plain", contents)

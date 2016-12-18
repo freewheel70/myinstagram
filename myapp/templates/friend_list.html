@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block custom_style %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>{{ list_title }}</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for friend in friends %}
+            {% if friend.followed %}
+                <tr class="success">
+                    <td><a href="{{ friend.link }}">{{ friend.username }}</a></td>
+                    <td><a href="{{ friend.link }}">{{ friend.email }}</a></td>
+                    <td><a href="{{ friend.link }}">Follwing</a></td>
+                </tr>
+            {% else %}
+                <tr class="info">
+                    <td><a href="{{ friend.link }}">{{ friend.username }}</a></td>
+                    <td><a href="{{ friend.link }}">{{ friend.email }}</a></td>
+                    <td><a href="{{ friend.followlink }}" class="btn btn-warning">Follow Now</a></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% if debug %}
+    {{ debug }}
+{% endif%}
+{% endblock %}
+{% block custom_js %}
+{% endblock %}

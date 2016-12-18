@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>FunkLoad bench report</title>
+<meta name="date" content="2016-12-17 11:32:03" />
+<style type="text/css">
+
+/* funkload doc css */
+/* $Id: nuxeo_doc.css 21596 2005-02-15 10:01:33Z bdelbosc $ */
+
+body {
+  font: 90% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: black;
+  margin: 2em;
+  padding: 2em;
+}
+
+a[href] {
+  color: #436976;
+  background-color: transparent;
+}
+
+h1 a[href] {
+  text-decoration: none;
+  color: #fcb100;
+  background-color: transparent;
+}
+
+a.strong {
+  font-weight: bold;
+}
+
+img {
+  margin: 0;
+  border: 0;
+}
+
+p {
+  margin: 0.5em 0 1em 0;
+  line-height: 1.5em;
+}
+p a {
+  text-decoration: underline;
+}
+p a:visited {
+  color: purple;
+  background-color: transparent;
+}
+p a:active {
+  color: red;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: none;
+}
+p img {
+  border: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003a6b;
+  background-color: transparent;
+  font: 100% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 0.5em;
+}
+
+h1 {
+  font-size: 160%;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #888;
+  margin-top: 1em;
+}
+
+h1.title {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 140%;
+  margin-bottom: 0.5em;
+}
+h3 {
+  font-size: 120%;
+  margin-bottom: 0.5em;
+}
+h4 {
+  font-size: 110%;
+  font-weight: bold;
+}
+h5 {
+  font-size: 100%;
+  font-weight: bold;
+}
+h6 {
+  font-size: 80%;
+  font-weight: bold;
+}
+
+ul a, ol a {
+  text-decoration: underline;
+}
+
+dt {
+  font-weight: bold;
+}
+dt a {
+  text-decoration: none;
+}
+
+dd {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+legend {
+  background: #ffffff;
+  padding: 0.5em;
+}
+
+form {
+  margin: 0;
+}
+
+
+dl.form {
+  margin: 0;
+  padding: 1em;
+}
+
+dl.form dt {
+  width: 30%;
+  float: left;
+  margin: 0;
+  padding: 0 0.5em 0.5em 0;
+  text-align: right;
+}
+
+input {
+  font: 100% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  color: black;
+  background-color: white;
+  vertical-align: middle;
+}
+
+abbr, acronym, .explain {
+  color: black;
+  background-color: transparent;
+}
+
+q, blockquote {
+}
+
+code, pre {
+  font-family: monospace;
+  font-size: 1.2em;
+  display: block;
+  padding: 10px;
+  border: 1px solid #838183;
+  background-color: #eee;
+  color: #000;
+  overflow: auto;
+  margin: 0.5em 1em;
+}
+
+table.docutils {
+  border: 1px solid black;
+  font-size: 0.6em;
+  border-spacing: 0;
+  padding: 0;
+  margin: 1em;
+}
+
+table.docutils td {
+  border: 1px solid #CCC;
+  text-align: right;
+  padding: 0 0.3em;
+  margin: 0;
+}
+
+table.docutils tr {
+ padding: 0;
+ margin: 0;
+}
+
+table.docutils th {
+  border: 1px solid #CCC;
+  border-bottom: 1px solid black;
+  padding: 0.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+table.docutils td p, table.docutils th p {
+  margin: 0;
+  padding: 0;
+}
+
+table.docutils th.field-name {
+  border: 1px solid #CCC;
+}
+
+div.abstract {
+  padding: 0.5em;
+  background-color: #eef;
+  border: 1px solid #838183;
+  margin: 0.5em 1em;
+}
+
+div.abstract {
+  padding: 0.5em;
+  background-color: #eef;
+  border: 1px solid #838183;
+  margin: 0.5em 1em;
+}
+
+div.warning, div.note {
+  padding: 0.5em;
+  background-color: #fee;
+  border: 1px solid #838183;
+  margin: 0.5em 1em;
+}
+
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+}
+
+div.abstract p.topic-title {
+  font-weight: bold
+}
+
+
+th.field-name {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+td.field-body {
+  font-size: 1.5em;
+}
+
+tr.field {
+  border: none;
+}
+
+
+div.contents p.first a {
+  font-size: 150%;
+  border-bottom: 1px solid #888;
+  color: #fcb100;
+}
+
+div.contents a  { text-decoration: none }
+
+pre.address {
+  display: inline;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="funkload-bench-report">
+<h1 class="title"><a class="reference external" href="http://funkload.nuxeo.org/">FunkLoad</a> bench report</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Date:</th>
+<td>2016-12-17 11:32:03</td></tr>
+</tbody>
+</table>
+<div class="abstract topic">
+<p class="topic-title first">Abstract</p>
+<p>Simply testing a default static page
+Bench result of <tt class="docutils literal">Simple.test_freewheel</tt>:
+No test description</p>
+</div>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#bench-configuration" id="id1">1&nbsp;&nbsp;&nbsp;Bench configuration</a></li>
+<li><a class="reference internal" href="#test-stats" id="id2">2&nbsp;&nbsp;&nbsp;Test stats</a></li>
+<li><a class="reference internal" href="#page-stats" id="id3">3&nbsp;&nbsp;&nbsp;Page stats</a></li>
+<li><a class="reference internal" href="#request-stats" id="id4">4&nbsp;&nbsp;&nbsp;Request stats</a></li>
+<li><a class="reference internal" href="#slowest-requests" id="id5">5&nbsp;&nbsp;&nbsp;Slowest requests</a></li>
+<li><a class="reference internal" href="#page-detail-stats" id="id6">6&nbsp;&nbsp;&nbsp;Page detail stats</a><ul class="auto-toc">
+<li><a class="reference internal" href="#page-001-bootstrap-3-3-0-css-bootstrap-min-css" id="id7">6.1&nbsp;&nbsp;&nbsp;PAGE 001: /bootstrap/3.3.0/css/bootstrap.min.css</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#failures-and-errors" id="id8">7&nbsp;&nbsp;&nbsp;Failures and Errors</a><ul class="auto-toc">
+<li><a class="reference internal" href="#failures" id="id9">7.1&nbsp;&nbsp;&nbsp;Failures</a></li>
+<li><a class="reference internal" href="#errors" id="id10">7.2&nbsp;&nbsp;&nbsp;Errors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#definitions" id="id11">8&nbsp;&nbsp;&nbsp;Definitions</a></li>
+</ul>
+</div>
+<div class="section" id="bench-configuration">
+<h1><a class="toc-backref" href="#id1">1&nbsp;&nbsp;&nbsp;Bench configuration</a></h1>
+<ul class="simple">
+<li>Launched: 2016-12-17 11:32:03</li>
+<li>From: ip-172-31-18-197</li>
+<li>Test: <tt class="docutils literal">test_Simple.py Simple.test_freewheel</tt></li>
+<li>Target server: <a class="reference external" href="http://52.221.228.19:8037/api">http://52.221.228.19:8037/api</a></li>
+<li>Cycles of concurrent users: [1, 50, 100, 200, 250, 300]</li>
+<li>Cycle duration: 10s</li>
+<li>Sleeptime between request: from 0.0s to 0.5s</li>
+<li>Sleeptime between test case: 0.01s</li>
+<li>Startup delay between thread: 0.01s</li>
+<li>Apdex: <sub>1.5</sub></li>
+<li><a class="reference external" href="http://funkload.nuxeo.org/">FunkLoad</a> version: 1.16.1</li>
+</ul>
+</div>
+<div class="section" id="test-stats">
+<h1><a class="toc-backref" href="#id2">2&nbsp;&nbsp;&nbsp;Test stats</a></h1>
+<p>The number of Successful <strong>Tests</strong> Per Second (STPS) over Concurrent Users (CUs).</p>
+<blockquote>
+<img alt="tests.png" src="tests.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">CUs</th>
+<th class="head">STPS</th>
+<th class="head">TOTAL</th>
+<th class="head">SUCCESS</th>
+<th class="head">ERROR</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>50</td>
+<td>10.900</td>
+<td>109</td>
+<td>109</td>
+<td>0.00%</td>
+</tr>
+<tr><td>100</td>
+<td>10.800</td>
+<td>108</td>
+<td>108</td>
+<td>0.00%</td>
+</tr>
+<tr><td>200</td>
+<td>10.500</td>
+<td>105</td>
+<td>105</td>
+<td>0.00%</td>
+</tr>
+<tr><td>250</td>
+<td>6.400</td>
+<td>64</td>
+<td>64</td>
+<td>0.00%</td>
+</tr>
+<tr><td>300</td>
+<td>4.400</td>
+<td>207</td>
+<td>44</td>
+<td>78.74%</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="page-stats">
+<h1><a class="toc-backref" href="#id3">3&nbsp;&nbsp;&nbsp;Page stats</a></h1>
+<p>The number of Successful <strong>Pages</strong> Per Second (SPPS) over Concurrent Users (CUs).
+Note that an XML RPC call count like a page.</p>
+<blockquote>
+<img alt="pages_spps.png" src="pages_spps.png" />
+<img alt="pages.png" src="pages.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">CUs</th>
+<th class="head">Apdex*</th>
+<th class="head">Rating</th>
+<th class="head">SPPS</th>
+<th class="head">maxSPPS</th>
+<th class="head">TOTAL</th>
+<th class="head">SUCCESS</th>
+<th class="head">ERROR</th>
+<th class="head">MIN</th>
+<th class="head">AVG</th>
+<th class="head">MAX</th>
+<th class="head">P10</th>
+<th class="head">MED</th>
+<th class="head">P90</th>
+<th class="head">P95</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>0.000</td>
+<td>UNACCEPTABLE</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0</td>
+<td>0</td>
+<td>0.00%</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>-1.000</td>
+<td>-1.000</td>
+<td>-1.000</td>
+<td>-1.000</td>
+</tr>
+<tr><td>50</td>
+<td>0.991</td>
+<td>Excellent</td>
+<td>125.500</td>
+<td>146.000</td>
+<td>1255</td>
+<td>1255</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.136</td>
+<td>4.084</td>
+<td>0.013</td>
+<td>0.056</td>
+<td>0.194</td>
+<td>0.307</td>
+</tr>
+<tr><td>100</td>
+<td>0.996</td>
+<td>Excellent</td>
+<td>131.200</td>
+<td>150.000</td>
+<td>1312</td>
+<td>1312</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.184</td>
+<td>6.468</td>
+<td>0.016</td>
+<td>0.114</td>
+<td>0.306</td>
+<td>0.376</td>
+</tr>
+<tr><td>200</td>
+<td>0.993</td>
+<td>Excellent</td>
+<td>139.500</td>
+<td>186.000</td>
+<td>1395</td>
+<td>1395</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.795</td>
+<td>7.333</td>
+<td>0.516</td>
+<td>0.622</td>
+<td>1.065</td>
+<td>1.201</td>
+</tr>
+<tr><td>250</td>
+<td>0.923</td>
+<td>Good</td>
+<td>137.900</td>
+<td>168.000</td>
+<td>1379</td>
+<td>1379</td>
+<td>0.00%</td>
+<td>0.004</td>
+<td>1.193</td>
+<td>7.481</td>
+<td>0.582</td>
+<td>1.209</td>
+<td>1.640</td>
+<td>1.696</td>
+</tr>
+<tr><td>300</td>
+<td>0.755</td>
+<td>FAIR</td>
+<td>134.500</td>
+<td>194.000</td>
+<td>1508</td>
+<td>1345</td>
+<td>10.81%</td>
+<td>0.003</td>
+<td>1.465</td>
+<td>9.805</td>
+<td>0.920</td>
+<td>1.617</td>
+<td>1.956</td>
+<td>2.185</td>
+</tr>
+</tbody>
+</table>
+<p>* Apdex <sub>1.5</sub></p>
+</blockquote>
+</div>
+<div class="section" id="request-stats">
+<h1><a class="toc-backref" href="#id4">4&nbsp;&nbsp;&nbsp;Request stats</a></h1>
+<p>The number of <strong>Requests</strong> Per Second (RPS) successful or not over Concurrent Users (CUs).</p>
+<blockquote>
+<img alt="requests_rps.png" src="requests_rps.png" />
+<img alt="requests.png" src="requests.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">CUs</th>
+<th class="head">Apdex*</th>
+<th class="head">Rating*</th>
+<th class="head">RPS</th>
+<th class="head">maxRPS</th>
+<th class="head">TOTAL</th>
+<th class="head">SUCCESS</th>
+<th class="head">ERROR</th>
+<th class="head">MIN</th>
+<th class="head">AVG</th>
+<th class="head">MAX</th>
+<th class="head">P10</th>
+<th class="head">MED</th>
+<th class="head">P90</th>
+<th class="head">P95</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>0.000</td>
+<td>UNACCEPTABLE</td>
+<td>0.100</td>
+<td>1.000</td>
+<td>1</td>
+<td>1</td>
+<td>0.00%</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+</tr>
+<tr><td>50</td>
+<td>0.991</td>
+<td>Excellent</td>
+<td>153.300</td>
+<td>189.000</td>
+<td>1533</td>
+<td>1533</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.129</td>
+<td>3.187</td>
+<td>0.010</td>
+<td>0.050</td>
+<td>0.232</td>
+<td>0.469</td>
+</tr>
+<tr><td>100</td>
+<td>0.965</td>
+<td>Excellent</td>
+<td>159.600</td>
+<td>186.000</td>
+<td>1596</td>
+<td>1596</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.367</td>
+<td>8.455</td>
+<td>0.012</td>
+<td>0.097</td>
+<td>0.331</td>
+<td>1.029</td>
+</tr>
+<tr><td>200</td>
+<td>0.968</td>
+<td>Excellent</td>
+<td>171.500</td>
+<td>212.000</td>
+<td>1715</td>
+<td>1715</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>0.902</td>
+<td>7.044</td>
+<td>0.088</td>
+<td>0.598</td>
+<td>1.139</td>
+<td>5.157</td>
+</tr>
+<tr><td>250</td>
+<td>0.893</td>
+<td>Good</td>
+<td>174.900</td>
+<td>244.000</td>
+<td>1749</td>
+<td>1749</td>
+<td>0.00%</td>
+<td>0.002</td>
+<td>1.256</td>
+<td>9.119</td>
+<td>0.198</td>
+<td>1.170</td>
+<td>2.469</td>
+<td>3.857</td>
+</tr>
+<tr><td>300</td>
+<td>0.743</td>
+<td>FAIR</td>
+<td>190.300</td>
+<td>289.000</td>
+<td>1903</td>
+<td>1740</td>
+<td>8.57%</td>
+<td>0.001</td>
+<td>1.358</td>
+<td>8.820</td>
+<td>0.012</td>
+<td>1.521</td>
+<td>1.991</td>
+<td>2.729</td>
+</tr>
+</tbody>
+</table>
+<p>* Apdex <sub>1.5</sub></p>
+</blockquote>
+</div>
+<div class="section" id="slowest-requests">
+<h1><a class="toc-backref" href="#id5">5&nbsp;&nbsp;&nbsp;Slowest requests</a></h1>
+<p>The 5 slowest average response time during the best cycle with <strong>200</strong> CUs:</p>
+<ul class="simple">
+<li>In page 001, Apdex rating: FAIR, avg response time: 1.89s, link: <tt class="docutils literal">/bootstrap/3.3.0/css/bootstrap.min.css</tt>
+``</li>
+<li>In page 001, Apdex rating: FAIR, avg response time: 1.81s, link: <tt class="docutils literal"><span class="pre">/bootstrap/3.3.0/css/bootstrap-theme.min.css</span></tt>
+``</li>
+<li>In page 004, Apdex rating: Excellent, avg response time: 0.77s, get: <tt class="docutils literal">/api/profile/me</tt>
+<cite>Visit profile page</cite></li>
+<li>In page 005, Apdex rating: Excellent, avg response time: 0.76s, post: <tt class="docutils literal">/api/upload/newimage</tt>
+<cite>Upload a new image</cite></li>
+<li>In page 003, Apdex rating: Excellent, avg response time: 0.76s, get: <tt class="docutils literal">/api/profile/me</tt>
+``</li>
+</ul>
+</div>
+<div class="section" id="page-detail-stats">
+<h1><a class="toc-backref" href="#id6">6&nbsp;&nbsp;&nbsp;Page detail stats</a></h1>
+<div class="section" id="page-001-bootstrap-3-3-0-css-bootstrap-min-css">
+<h2><a class="toc-backref" href="#id7">6.1&nbsp;&nbsp;&nbsp;PAGE 001: /bootstrap/3.3.0/css/bootstrap.min.css</a></h2>
+<ul>
+<li><p class="first">Req: 002, link, url <tt class="docutils literal">/bootstrap/3.3.0/css/bootstrap.min.css</tt></p>
+<blockquote>
+<img alt="request_001.002.png" src="request_001.002.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">CUs</th>
+<th class="head">Apdex*</th>
+<th class="head">Rating</th>
+<th class="head">TOTAL</th>
+<th class="head">SUCCESS</th>
+<th class="head">ERROR</th>
+<th class="head">MIN</th>
+<th class="head">AVG</th>
+<th class="head">MAX</th>
+<th class="head">P10</th>
+<th class="head">MED</th>
+<th class="head">P90</th>
+<th class="head">P95</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>0.000</td>
+<td>UNACCEPTABLE</td>
+<td>1</td>
+<td>1</td>
+<td>0.00%</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+<td>6.638</td>
+</tr>
+<tr><td>50</td>
+<td>0.939</td>
+<td>Good</td>
+<td>123</td>
+<td>123</td>
+<td>0.00%</td>
+<td>0.013</td>
+<td>0.489</td>
+<td>3.187</td>
+<td>0.019</td>
+<td>0.132</td>
+<td>1.812</td>
+<td>2.130</td>
+</tr>
+<tr><td>100</td>
+<td>0.748</td>
+<td>FAIR</td>
+<td>121</td>
+<td>121</td>
+<td>0.00%</td>
+<td>0.014</td>
+<td>1.880</td>
+<td>8.455</td>
+<td>0.020</td>
+<td>0.097</td>
+<td>6.769</td>
+<td>7.015</td>
+</tr>
+<tr><td>200</td>
+<td>0.815</td>
+<td>FAIR</td>
+<td>143</td>
+<td>143</td>
+<td>0.00%</td>
+<td>0.014</td>
+<td>1.889</td>
+<td>7.044</td>
+<td>0.021</td>
+<td>0.130</td>
+<td>5.872</td>
+<td>6.209</td>
+</tr>
+<tr><td>250</td>
+<td>0.716</td>
+<td>FAIR</td>
+<td>164</td>
+<td>164</td>
+<td>0.00%</td>
+<td>0.015</td>
+<td>2.326</td>
+<td>9.119</td>
+<td>0.023</td>
+<td>3.420</td>
+<td>4.338</td>
+<td>4.671</td>
+</tr>
+<tr><td>300</td>
+<td>0.719</td>
+<td>FAIR</td>
+<td>178</td>
+<td>178</td>
+<td>0.00%</td>
+<td>0.014</td>
+<td>1.741</td>
+<td>8.820</td>
+<td>0.023</td>
+<td>2.001</td>
+<td>3.932</td>
+<td>4.268</td>
+</tr>
+</tbody>
+</table>
+<p>* Apdex <sub>1.5</sub></p>
+</blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="failures-and-errors">
+<h1><a class="toc-backref" href="#id8">7&nbsp;&nbsp;&nbsp;Failures and Errors</a></h1>
+<div class="section" id="failures">
+<h2><a class="toc-backref" href="#id9">7.1&nbsp;&nbsp;&nbsp;Failures</a></h2>
+<ul>
+<li><p class="first">27 time(s), code: -1:</p>
+<pre class="literal-block">
+No traceback.
+</pre>
+</li>
+<li><p class="first">83 time(s), code: 500:</p>
+<pre class="literal-block">
+No traceback.
+</pre>
+</li>
+<li><p class="first">28 time(s), code: 502:</p>
+<pre class="literal-block">
+No traceback.
+</pre>
+</li>
+</ul>
+</div>
+<div class="section" id="errors">
+<h2><a class="toc-backref" href="#id10">7.2&nbsp;&nbsp;&nbsp;Errors</a></h2>
+<ul>
+<li><p class="first">25 time(s), code: -1:</p>
+<pre class="literal-block">
+Traceback (most recent call last):
+
+File &quot;/usr/lib/python2.7/dist-packages/funkload/FunkLoadTestCase.py&quot;, line 202, in _connect
+cert_file=self._certfile_path, method=rtype)
+
+File &quot;/usr/lib/python2.7/dist-packages/funkload/PatchWebunit.py&quot;, line 385, in WF_fetch
+errcode, errmsg, headers = h.getreply()
+
+File &quot;/usr/lib/python2.7/httplib.py&quot;, line 1123, in getreply
+response = self._conn.getresponse()
+
+File &quot;/usr/lib/python2.7/httplib.py&quot;, line 1051, in getresponse
+response.begin()
+
+File &quot;/usr/lib/python2.7/httplib.py&quot;, line 415, in begin
+version, status, reason = self._read_status()
+
+File &quot;/usr/lib/python2.7/httplib.py&quot;, line 371, in _read_status
+line = self.fp.readline(_MAXLINE + 1)
+
+File &quot;/usr/lib/python2.7/socket.py&quot;, line 476, in readline
+data = self._sock.recv(self._rbufsize)
+</pre>
+</li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/ubuntu/4080test/test_freewheel-20161217T113203/index.rst</tt>, line 181)</p>
+Bullet list ends without a blank line; unexpected unindent.</div>
+<blockquote>
+error: [Errno 104] Connection reset by peer</blockquote>
+</div>
+</div>
+<div class="section" id="definitions">
+<h1><a class="toc-backref" href="#id11">8&nbsp;&nbsp;&nbsp;Definitions</a></h1>
+<ul>
+<li><p class="first">CUs: Concurrent users or number of concurrent threads executing tests.</p>
+</li>
+<li><p class="first">Request: a single GET/POST/redirect/xmlrpc request.</p>
+</li>
+<li><p class="first">Page: a request with redirects and resource links (image, css, js) for an html page.</p>
+</li>
+<li><p class="first">STPS: Successful tests per second.</p>
+</li>
+<li><p class="first">SPPS: Successful pages per second.</p>
+</li>
+<li><p class="first">RPS: Requests per second, successful or not.</p>
+</li>
+<li><p class="first">maxSPPS: Maximum SPPS during the cycle.</p>
+</li>
+<li><p class="first">maxRPS: Maximum RPS during the cycle.</p>
+</li>
+<li><p class="first">MIN: Minimum response time for a page or request.</p>
+</li>
+<li><p class="first">AVG: Average response time for a page or request.</p>
+</li>
+<li><p class="first">MAX: Maximmum response time for a page or request.</p>
+</li>
+<li><p class="first">P10: 10th percentile, response time where 10 percent of pages or requests are delivered.</p>
+</li>
+<li><p class="first">MED: Median or 50th percentile, response time where half of pages or requests are delivered.</p>
+</li>
+<li><p class="first">P90: 90th percentile, response time where 90 percent of pages or requests are delivered.</p>
+</li>
+<li><p class="first">P95: 95th percentile, response time where 95 percent of pages or requests are delivered.</p>
+</li>
+<li><p class="first">Apdex T: Application Performance Index,
+this is a numerical measure of user satisfaction, it is based
+on three zones of application responsiveness:</p>
+<ul>
+<li><p class="first">Satisfied: The user is fully productive. This represents the
+time value (T seconds) below which users are not impeded by
+application response time.</p>
+</li>
+<li><p class="first">Tolerating: The user notices performance lagging within
+responses greater than T, but continues the process.</p>
+</li>
+<li><p class="first">Frustrated: Performance with a response time greater than 4*T
+seconds is unacceptable, and users may abandon the process.</p>
+<p>By default T is set to 1.5s this means that response time between 0
+and 1.5s the user is fully productive, between 1.5 and 6s the
+responsivness is tolerating and above 6s the user is frustrated.</p>
+<p>The Apdex score converts many measurements into one number on a
+uniform scale of 0-to-1 (0 = no users satisfied, 1 = all users
+satisfied).</p>
+<p>Visit <a class="reference external" href="http://www.apdex.org/">http://www.apdex.org/</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Rating: To ease interpretation the Apdex
+score is also represented as a rating:</p>
+<ul class="simple">
+<li>U for UNACCEPTABLE represented in gray for a score between 0 and 0.5</li>
+<li>P for POOR represented in red for a score between 0.5 and 0.7</li>
+<li>F for FAIR represented in yellow for a score between 0.7 and 0.85</li>
+<li>G for Good represented in green for a score between 0.85 and 0.94</li>
+<li>E for Excellent represented in blue for a score between 0.94 and 1.</li>
+</ul>
+</li>
+</ul>
+<p>Report generated with <a class="reference external" href="http://funkload.nuxeo.org/">FunkLoad</a> 1.16.1, more information available on the <a class="reference external" href="http://funkload.nuxeo.org/#benching">FunkLoad site</a>.</p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+Generated on: 2016-12-17 11:34 UTC.
+
+</div>
+</body>
+</html>

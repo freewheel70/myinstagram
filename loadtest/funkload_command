@@ -1,0 +1,5 @@
+fl-run-test -dv test_Simple.py
+
+fl-run-bench -c 1:20:50 test_Simple.py Simple.test_freewheel
+
+fl-build-report --html simple-bench.xml

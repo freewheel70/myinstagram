@@ -1,0 +1,25 @@
+Your project will be assessed based on the following criteria (total 100%):
+
+Done (10%) - User account (account creation, sign-in/sign-out)
+Done (10%) - Allowing users to add new items (notes/photos) to their own account
+Done (10%) - Allowing users to list the items they have added
+Done (10%) - Allowing users to remove items they have added
+Done (10%) - Allowing users to search for items using keywords
+Done (10%) - Using caching in appropriate places to improve performance -- in profile image list
+(30%) - Additional feature and a method to enable scaling of the system
+(10%) - Load testing report
+In particular, for load testing, you should use a load testing tool to test your application's search API. Plot the distributions of response times of requests under different load conditions (10, 50, 100, 500 concurrent users).
+
+You should also prepare a brief report (up to 5 pages or 1,000 words) of your project, which should include the following items:
+
+Description of your system's architecture with diagram(s)
+Description of the additional feature your have implemented
+Description of how you have implemented the additional feature such that it can be easily scaled
+Your load testing results
+
+
+In addition, you will have to implement an additional feature of your choice, some ideas include:
+
+Done  A social network (e.g. allow users to follow or be friend with one another, seeing each other's resources)
+Recommendations (e.g. generating related items for the user based on some similarity measures)
+Email digest (e.g. sending email to the user periodically or on request about any update in the system)

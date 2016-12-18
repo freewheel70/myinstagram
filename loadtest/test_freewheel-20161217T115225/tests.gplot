@@ -1,0 +1,8 @@
+set output "/home/ubuntu/4080test/test_freewheel-20161217T115225/tests.png"
+set title "Successful Tests Per Second"
+set terminal png size 640,540
+set xlabel "Concurrent Users"
+set ylabel "Test/s"
+set grid back
+set xrange [0:501]
+plot "/home/ubuntu/4080test/test_freewheel-20161217T115225/tests.data" u 1:2 w linespoints lw 2 lt 2 t "STPS"

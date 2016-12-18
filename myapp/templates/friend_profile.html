@@ -1,0 +1,51 @@
+{% extends "profile.html" %}
+{% block title %}Friend Profile{% endblock %}
+
+{% block profile %}
+<h1>{{ friendname }}</h1>
+<h3>{{ friendemail }}
+    {% if is_friend %}
+        <a href="http://52.221.228.19:8037/api/friend/unfollow?friend_email={{ friendemail }}" class="btn btn-danger">Unfollow</a>
+    {% endif %}
+    </h3>
+<br>
+{% endblock %}
+
+{% block tool %}{% endblock %}
+
+{% block image_list %}
+     <div class="container">
+        <div class="row">
+            {% set count = 1 %}
+            {% for image in images %}
+            <div class="col-sm-6 col-md-3">
+                <a href="" class="thumbnail" data-toggle="modal" data-target=".pop-up-{{ count }}">
+                    <img src="{{ image.image_path }}"/>
+                </a>
+                <div class="caption">
+                    <p>{{ image.description }}</p>
+                </div>
+            </div>
+
+            <div class="modal fade pop-up-{{ count }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myLargeModalLabel-1">{{ image.description }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ image.image_path }}" class="img-responsive img-rounded center-block"
+                                 alt="">
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal mixer image -->
+
+            {% set count = count + 1 %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

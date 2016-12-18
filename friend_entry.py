@@ -1,0 +1,1 @@
+from friend_service import friend_handler

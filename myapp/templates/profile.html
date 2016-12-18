@@ -1,11 +1,246 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-</head>
-<body>
-<h1>My Profile</h1>
-<p>Email: {{ email }}</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block custom_style %}
+<style>
+        #profile_words{
+            text-align:center;
+        }
+        .thumbnail>img{
+            height:250px;
+        }
+        .image-preview-input {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+        .image-preview-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .image-preview-input-title {
+            margin-left:2px;
+        }
+
+        #image_uploader{
+            z-index:2;
+            position:fixed;
+            right:30px;
+            bottom:300px;
+            width:300px;
+        }
+
+        #search_bar{
+            z-index:2;
+            position:fixed;
+            right:30px;
+            top:100px;
+            width:300px;
+        }
+
+
+
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+    {% block profile %}
+    <div id="profile_words" class="container">
+        <h1>My Profile</h1>
+        <h3>Email: {{ email }}</h3>
+        <br>
+    </div>
+    {% endblock %}
+
+    {% block tool %}
+        <div id="search_bar" class="container">
+        <div id="imaginary_container">
+
+            <form action="http://52.221.228.19:8037/api/search/image" method="post">
+                <div class="input-group">
+                    <input type="text" name="key" class="form-control" placeholder="Search keyword" required>
+                    <span class="input-group-addon">
+                                <a class="submit-link">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </a>
+                    </span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+        <div class="container" id="image_uploader">
+        <p>Upload new images:</p>
+        <form id="image_form" action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="text" class="form-control image_description" name="description" maxlength="30"
+                       placeholder="Descriptions..." style="display:none;" required>
+            </div>
+            <div class="input-group image-preview">
+                <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                <!-- don't give a name === doesn't send on POST/GET -->
+                <span class="input-group-btn">
+                        <!-- image-preview-clear button -->
+                        <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                            <span class="glyphicon glyphicon-remove"></span> Clear
+                        </button>
+                        <button type="button" class="btn btn-default image-preview-upload" style="display:none;">
+                            <span class="glyphicon glyphicon-upload"></span> Upload
+                        </button>
+                    <!-- image-preview-input -->
+                        <div class="btn btn-default image-preview-input">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                            <span class="image-preview-input-title">Browse</span>
+                            <input type="file" accept="image/jpeg, image/jpg" name="image"/>
+                        </div>
+                    </span>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+
+    {% block image_list %}
+        <div class="container">
+        <div class="row">
+            {% set count = 1 %}
+            {% for image in images %}
+            <div class="col-sm-6 col-md-3">
+                <a href="" class="thumbnail" data-toggle="modal" data-target=".pop-up-{{ count }}">
+                    <img src="{{ image.image_path }}"/>
+                </a>
+                <div class="caption">
+                    <p>{{ image.description }}</p>
+
+                    <p>
+                        <form action="/api/remove/image" method="post">
+                            <input type="hidden" name="image" value="{{ image.image_path }}">
+                            <a href="#" class="btn btn-default submit-link" role="button">Remove</a>
+                        </form>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="modal fade pop-up-{{ count }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myLargeModalLabel-1">{{ image.description }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{ image.image_path }}" class="img-responsive img-rounded center-block"
+                                 alt="">
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal mixer image -->
+
+            {% set count = count + 1 %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+{% endblock %}
+
+{% block custom_js %}
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script>
+$(document).on('click', '#close-preview', function(){
+    $('.image-preview').popover('hide');
+    // Hover befor close the preview
+    $('.image-preview').hover(
+        function () {
+           $('.image-preview').popover('show');
+        },
+         function () {
+           $('.image-preview').popover('hide');
+        }
+    );
+});
+
+$(function() {
+    // Create the close button
+    var closebtn = $('<button/>', {
+        type:"button",
+        text: 'x',
+        id: 'close-preview',
+        style: 'font-size: initial;',
+    });
+    closebtn.attr("class","close pull-right");
+    // Set the popover default content
+    $('.image-preview').popover({
+        trigger:'manual',
+        html:true,
+        title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+        content: "There's no image",
+        placement:'bottom'
+    });
+    // Clear event
+    $('.image-preview-clear').click(function(){
+        $('.image-preview').attr("data-content","").popover('hide');
+        $('.image-preview-filename').val("");
+        $('.image-preview-clear').hide();
+        $(".image-preview-upload").hide();
+        $(".image_description").hide();
+        $(".image_description").val("");
+        $('.image-preview-input input:file').val("");
+        $(".image-preview-input-title").text("Browse");
+    });
+    $('.image-preview-upload').click(function(){
+        $('#image_form').submit();
+    });
+    // Create the preview image
+    $(".image-preview-input input:file").change(function (){
+        var img = $('<img/>', {
+            id: 'dynamic',
+            width:250,
+            height:200
+        });
+        var file = this.files[0];
+        var reader = new FileReader();
+        // Set preview image into the popover data-content
+        reader.onload = function (e) {
+            $(".image-preview-input-title").text("Change");
+            $(".image-preview-clear").show();
+            $(".image-preview-upload").show();
+            $(".image_description").show();
+            $(".image-preview-filename").val(file.name);
+            img.attr('src', e.target.result);
+            $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+        }
+        reader.readAsDataURL(file);
+    });
+});
+
+$('form .submit-link').on({
+    click: function (event) {
+        event.preventDefault();
+        $(this).closest('form').submit();
+    }
+});
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}

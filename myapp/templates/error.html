@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Error{% endblock %}
+{% block custom_style %}
+    <style>
+        #error_message{
+            margin-top:100px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+  <div id="error_message" class="alert alert-danger">
+    <strong>Error!</strong> {{ error_message }}
+  </div>
+{% endblock %}
+{% block custom_js %}
+<script>
+{% if redirect_url %}
+        setTimeout(function () {
+            window.location.href = "{{ redirect_url }}";
+        }, 2000);
+{% endif %}
+</script>
+{% endblock %}

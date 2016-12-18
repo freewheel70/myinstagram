@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block custom_style %}
+<style>
+        #keyword{
+            text-align:center;
+            margin-bottom:50px;
+        }
+        .thumbnail>img{
+            height:250px;
+        }
+        .image-preview-input {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+        .image-preview-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .image-preview-input-title {
+            margin-left:2px;
+        }
+        #search_bar{
+            z-index:2;
+            position:fixed;
+            right:30px;
+            top:100px;
+            width:300px;
+        }
+
+
+
+</style>
+{% endblock %}
+{% block content %}
+<div id="keyword" class="container">
+    <h3 >Keyword: {{ keyword }}</h3>
+    <hr>
+</div>
+<div id="search_bar" class="container">
+    <div id="imaginary_container">
+
+        <form action="http://52.221.228.19:8037/api/search/image" method="post">
+            <div class="input-group">
+                <input type="text" name="key" class="form-control" placeholder="Search keyword" required>
+                <span class="input-group-addon">
+                            <a class="submit-link">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+                </span>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {% set count = 1 %}
+        {% for image in images %}
+        <div class="col-sm-6 col-md-3">
+            <a href="" class="thumbnail" data-toggle="modal" data-target=".pop-up-{{ count }}">
+                <img src="{{ image.image_path }}"/>
+            </a>
+            <div class="caption">
+                <p>{{ image.description }}</p>
+                <p>
+                    <form action="/api/remove/image" method="post">
+                        <input type="hidden" name="image" value="{{ image.image_path }}">
+                        <a href="#" class="btn btn-default submit-link" role="button">Remove</a>
+                    </form>
+                </p>
+            </div>
+        </div>
+
+        <div class="modal fade pop-up-{{ count }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myLargeModalLabel-1">{{ image.description }}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{ image.image_path }}" class="img-responsive img-rounded center-block"
+                             alt="">
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal mixer image -->
+
+        {% set count = count + 1 %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block custom_js %}
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script>
+
+$('form .submit-link').on({
+    click: function (event) {
+        event.preventDefault();
+        $(this).closest('form').submit();
+    }
+});
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}

@@ -16,5 +16,16 @@
 
 8. load testing
 
-9, session  http://flask.pocoo.org/snippets/category/sessions/
+9, images are stored by directories named from user-id plus random chars
+
+10.service-oriented-architecture
+    account-handler (signup, login, logout)
+    image-uploader
+    image-reviewer
+
+11.social network
+    explore friends -- stranger list
+    follow friends -- db add friend
+    my friend list -- another list
+    watch friends resources
 
