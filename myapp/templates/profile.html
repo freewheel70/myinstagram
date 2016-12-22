@@ -5,9 +5,18 @@
         #profile_words{
             text-align:center;
         }
-        .thumbnail>img{
-            height:250px;
+        #image_grid{
+            padding-left:200px;
+            padding-right:200px;
         }
+        .thumbnail>img{
+            height:220px;
+        }
+
+        .popup_image>img{
+            max-height: 580px;
+        }
+
         .image-preview-input {
             position: relative;
             overflow: hidden;
@@ -111,13 +120,13 @@
     {% endblock %}
 
     {% block image_list %}
-        <div class="container">
+        <div id="image_grid">
         <div class="row">
             {% set count = 1 %}
             {% for image in images %}
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
                 <a href="" class="thumbnail" data-toggle="modal" data-target=".pop-up-{{ count }}">
-                    <img src="{{ image.image_path }}"/>
+                    <img class="img-thumbnail" src="{{ image.image_path }}"/>
                 </a>
                 <div class="caption">
                     <p>{{ image.description }}</p>
@@ -141,7 +150,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 class="modal-title" id="myLargeModalLabel-1">{{ image.description }}</h4>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body popup_image">
                             <img src="{{ image.image_path }}" class="img-responsive img-rounded center-block"
                                  alt="">
                         </div>

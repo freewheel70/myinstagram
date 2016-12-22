@@ -2,80 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="967a2d6e-d8a0-4e2e-907e-bf11dd7be9c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadtest/ginsang.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/Forms.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/bootstraptest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/imagetest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/logout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/portal_form_backup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/a_test/upload_image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account_entry.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounter/login.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounter/logout.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounter/profile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounter/signup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/asyncworker/notificationworker.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_entry.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/get_all_friends.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/get_my_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/go_follow_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/go_see_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/go_unfollow_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/friend_service/session.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_entry.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_service/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_service/image_remover.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_service/image_searcher.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_service/image_uploader.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image_service/session.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadtest/Simple.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadtest/funkload_command" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadtest/test_Simple.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/contants/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/contants/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/all_friends.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/follow_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/my_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/see_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/friend/unfollow_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/imager/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/imager/image_searcher.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/imager/image_uploader.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/javascripts/bootstrap.file-input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/error.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/friend_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/friend_profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/portal_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/search_result.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/templates/success_and_redirect.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirement" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/keyword_sender.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/templates/logout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/specification" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asyncworker/emailworker.py" afterPath="$PROJECT_DIR$/asyncworker/emailworker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clear_db.py" afterPath="$PROJECT_DIR$/clear_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/__init__.py" afterPath="$PROJECT_DIR$/myapp/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/account/login.py" afterPath="$PROJECT_DIR$/myapp/account/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/account/logout.py" afterPath="$PROJECT_DIR$/myapp/account/logout.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/account/profile.py" afterPath="$PROJECT_DIR$/myapp/account/profile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/account/signup.py" afterPath="$PROJECT_DIR$/myapp/account/signup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/static/index.html" afterPath="$PROJECT_DIR$/myapp/static/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/templates/profile.html" afterPath="$PROJECT_DIR$/myapp/templates/profile.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/account/validator.py" afterPath="$PROJECT_DIR$/accounter/validator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/auth_validation.py" afterPath="$PROJECT_DIR$/accounter/session.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/image_remover.py" afterPath="$PROJECT_DIR$/myapp/imager/image_remover.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/image_uploader.py" afterPath="$PROJECT_DIR$/asyncworker/keywordworker.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/image_viewer.py" afterPath="$PROJECT_DIR$/myapp/imager/image_viewer.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/templates/login.html" afterPath="$PROJECT_DIR$/a_test/login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/templates/signup.html" afterPath="$PROJECT_DIR$/a_test/signup.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/utils/__init__.py" afterPath="$PROJECT_DIR$/accounter/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/myapp/utils/email_sender.py" afterPath="$PROJECT_DIR$/utils/email_sender.py" />
     </list>
     <ignored path="myinstagram.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,105 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test_Simple.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadtest/test_Simple.py">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/templates/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Simple.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadtest/Simple.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+            <state relative-caret-position="475">
+              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirement" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirement">
+      <file leaf-file-name="csrf_test.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/a_test/csrf_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_searcher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/imager/image_searcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="command.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/command.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emailworker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asyncworker/emailworker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notificationworker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asyncworker/notificationworker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_searcher.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/image_service/image_searcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image_uploader.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image_service/image_uploader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hashlib.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/hashlib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -206,8 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -233,6 +77,7 @@
       <find>confirm</find>
       <find>self.assertEqual(response.code, 200)</find>
       <find>unfollow</find>
+      <find>popup_image</find>
     </findStrings>
     <replaceStrings>
       <replace>friend</replace>
@@ -246,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/image_service/image_remover.py" />
         <option value="$PROJECT_DIR$/myapp/static/index.html" />
         <option value="$PROJECT_DIR$/a_test/imagetest.html" />
         <option value="$PROJECT_DIR$/utils/keyword_sender.py" />
@@ -274,7 +118,6 @@
         <option value="$PROJECT_DIR$/myapp/friend/all_friends.py" />
         <option value="$PROJECT_DIR$/myapp/friend/my_friend.py" />
         <option value="$PROJECT_DIR$/myapp/imager/image_searcher.py" />
-        <option value="$PROJECT_DIR$/myapp/templates/profile.html" />
         <option value="$PROJECT_DIR$/myapp/templates/portal_form.html" />
         <option value="$PROJECT_DIR$/requirement" />
         <option value="$PROJECT_DIR$/clear_db.py" />
@@ -297,6 +140,8 @@
         <option value="$PROJECT_DIR$/image_service/image_uploader.py" />
         <option value="$PROJECT_DIR$/loadtest/Simple.conf" />
         <option value="$PROJECT_DIR$/loadtest/test_Simple.py" />
+        <option value="$PROJECT_DIR$/myapp/templates/profile.html" />
+        <option value="$PROJECT_DIR$/a_test/csrf_test.html" />
       </list>
     </option>
   </component>
@@ -334,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,196 +191,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="friend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="account" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image_service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="friend_service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asyncworker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myinstagram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -741,10 +398,10 @@
     <option name="totallyTimeSpent" value="1558000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18604651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18287526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -803,13 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/specification.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -894,24 +544,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/templates/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a_test/portal_form_backup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/templates/portal_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1017,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1025,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
           <caret line="55" column="91" lean-forward="false" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
           <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,25 +742,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/hashlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="1650">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/image_service/image_uploader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="1000">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1144,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,25 +770,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadtest/Simple.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="525">
           <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadtest/test_Simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
+        <state relative-caret-position="1200">
           <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,6 +791,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/templates/portal_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3825">
+          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a_test/csrf_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>
