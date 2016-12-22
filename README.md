@@ -1,7 +1,5 @@
 # myinstagram
-A simple  instagram-like web app
-
-A web app concentrate on server side scalability
+A simple  instagram-like web app concentrated on server side scalability
 
 ### Features:
 1.	User account system. Users could sign up new accounts, login and logout.
